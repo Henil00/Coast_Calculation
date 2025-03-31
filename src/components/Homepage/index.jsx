@@ -53,12 +53,12 @@ export default function Homepage() {
   }
 
   return (
-    <div>
-      <h1 className="text-5xl font-bold items-center">Homepage</h1>
-      <p className="text-gray-500">Welcome to the homepage!</p>
+    <div className="p-3">
+      <h1 className="text-5xl font-bold items-center">Labour Calculation</h1>
+      
       <form onSubmit={handlesubmit}>
-        <div className="flex flex-col justify-center items-center">
-          <div className="w-1/2 ">
+        <div className="flex flex-col justify-center items-center  p-5 sm:p-0">
+          <div className="w-full sm:w-1/2 ">
             <Label htmlFor="paymentmethod">Item Code</Label>
             {typeof window !== "undefined" && (
               <Select
@@ -71,7 +71,7 @@ export default function Homepage() {
               />
             )}
           </div>
-          <div className="mt-2 w-1/2">
+          <div className="mt-2 w-full sm:w-1/2">
             <Input
               type="number"
               id="castingweight"
@@ -81,7 +81,7 @@ export default function Homepage() {
               required
             />
           </div>
-          <div className="mt-2 w-1/2">
+          <div className="mt-2 w-full sm:w-1/2">
             <Input
               type="number"
               id="castingrate"
@@ -91,7 +91,7 @@ export default function Homepage() {
               required
             />
           </div>
-          <div className="mt-2 w-1/2">
+          <div className="mt-2 w-full sm:w-1/2">
             <Input
               type="number"
               id="msstickweight"
@@ -101,7 +101,7 @@ export default function Homepage() {
               required
             />
           </div>
-          <div className="mt-2 w-1/2">
+          <div className="mt-2 w-full sm:w-1/2">
             <Input
               type="number"
               id="msstickrate"
@@ -111,7 +111,7 @@ export default function Homepage() {
               required
             />
           </div>
-          <div className="mt-2 w-1/2">
+          <div className="mt-2 w-full sm:w-1/2">
             <Input
               type="number"
               id="labour"
@@ -120,7 +120,7 @@ export default function Homepage() {
               onChange={(e) => setLabour(Number(e.target.value))}
               required
             />
-          </div><div className="mt-2 w-1/2">
+          </div><div className="mt-2 w-full sm:w-1/2">
             <Input
               type="number"
               id="extracost"
@@ -130,7 +130,7 @@ export default function Homepage() {
               required
             />
           </div>
-          <div className="mt-2 w-1/2">
+          <div className="mt-2 w-full sm:w-1/2">
             <Input
               type="number"
               id="sellprice"
@@ -141,7 +141,7 @@ export default function Homepage() {
             />
           </div>
           
-          <div className="mt-2 w-1/2">
+          <div className="mt-2 w-full sm:w-1/2">
             <Button className={"w-full"}>Button</Button>
           </div>
         </div>
