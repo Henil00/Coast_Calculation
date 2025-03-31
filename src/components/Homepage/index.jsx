@@ -59,7 +59,7 @@ export default function Homepage() {
       <form onSubmit={handlesubmit}>
         <div className="flex flex-col justify-center items-center  p-5 sm:p-0">
           <div className="w-full sm:w-1/2 ">
-            <Label htmlFor="paymentmethod">Item Code</Label>
+            <Label htmlFor="paymentmethod" className={"text-lg font-bold"}>Item Code</Label>
             {typeof window !== "undefined" && (
               <Select
                 options={Option}
@@ -67,7 +67,8 @@ export default function Homepage() {
                 onChange={setItemCode}
                 isSearchable
                 placeholder="Select Item Code"
-                className="mt-2"
+                className="mt-2 font-bold text-lg"
+                
               />
             )}
           </div>
@@ -147,8 +148,8 @@ export default function Homepage() {
         </div>
       </form>
       <div className="mt-5 m-20 items-center">
-        <Label>Profit</Label>
-        <p>{profit}</p>
+        <Label className={"text-lg font-bold"}>Profit</Label>
+        <p className="text-lg font-bold">{profit}</p>
       </div>
       {/* <Input 
         label=""
